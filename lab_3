@@ -1,0 +1,31 @@
+%% Filter design
+freqArray = [31, 62, 125, 250, 500, 1000, 2000, 4000, 8000,16000];
+order = 1024;
+fs = 44100;
+
+bBank = CreateFilters(freqArray, order, fs);
+
+%% Filtering of signals
+[signal,fs] = audioread('song.mp3');
+gain = ones(length(freqArray), 1);
+%% Filter design
+freqArray = [31, 62, 125, 250, 500, 1000, 2000, 4000, 8000,16000];
+order = 1024;
+fs = 44100;
+
+bBank = CreateFilters(freqArray, order, fs);
+
+%% Filtering of signals
+[signal,fs] = audioread('song.mp3');
+gain = ones(length(freqArray), 1);
+function signalOut =  FilteringBanks(signal, bBank, typeOfFilter, gain)
+switch typeOfFilter
+    case 'filter'
+        
+        
+    case 'fftfilt'
+        
+        
+   
+    
+end
